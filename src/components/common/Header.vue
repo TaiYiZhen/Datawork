@@ -10,7 +10,6 @@
           <el-dropdown-item>注销</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-
   </div>
 </template>
 
@@ -18,7 +17,6 @@
   export default {
     name: "Header",
     methods: {
-
     }
   }
 </script>

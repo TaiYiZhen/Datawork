@@ -1,15 +1,15 @@
 <template>
   <div class="wrapper">
-    <el-container style="height: 1064px; border: 1px solid #eee">
+    <el-container class="el-container1">
       <el-header>
         <v-header/>
       </el-header>
       <el-container>
-        <el-aside width="299px" style="background-color: rgb(40,65,87)">
+        <el-aside>
           <v-sidebar/>
         </el-aside>
         <el-main>
-         <h1>主页</h1>
+          <router-view></router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -36,5 +36,9 @@
   }
   .el-aside {
     color: #333;
+    background-color: rgb(40,65,87)
+  }
+  .el-container1{
+    height: 1064px;
   }
 </style>

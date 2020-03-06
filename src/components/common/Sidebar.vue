@@ -1,36 +1,35 @@
 <template>
   <div class="side-bar">
     <el-aside>
-      <el-menu background-color="#284157" text-color="white" >
+      <el-menu :default-active="this.$route.path" background-color="#284157" text-color="white" router>
+
         <el-submenu index="1">
-          <template slot="title"><i class="el-icon-message"></i>首页</template>
+          <template slot="title"><i class="el-icon-message"></i>数据管理</template>
           <el-menu-item-group>
-            <el-menu-item index="1-1">选项1</el-menu-item>
-            <el-menu-item index="1-2">选项2</el-menu-item>
-            <el-menu-item index="1-3">选项3</el-menu-item>
-            <el-menu-item index="1-4">选项4</el-menu-item>
+            <el-menu-item index="datashow">数据展示</el-menu-item>
+            <el-menu-item index="customershow">客户展示</el-menu-item>
+            <el-menu-item index="eqptconnect">设备连接</el-menu-item>
+            <el-menu-item index="frequencyshow">日活频次</el-menu-item>
+            <el-menu-item index="dataanalysis">数据分析</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
 
         <el-submenu index="2">
-          <template slot="title"><i class="el-icon-menu"></i>设备页</template>
+          <template slot="title"><i class="el-icon-menu"></i>设备管理</template>
           <el-menu-item-group>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-            <el-menu-item index="2-4">选项4</el-menu-item>
+            <el-menu-item index="eqptshow">设备列表</el-menu-item>
+            <el-menu-item index="eqptcalibration">设备标定</el-menu-item>
+            <el-menu-item index="eqptexception">异常设备</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
 
         <el-submenu index="3">
-          <template slot="title"><i class="el-icon-setting"></i>更新页</template>
+          <template slot="title"><i class="el-icon-setting"></i>设备更新</template>
           <el-menu-item-group>
-            <el-menu-item index="3-1">选项1</el-menu-item>
-            <el-menu-item index="3-2">选项2</el-menu-item>
-            <el-menu-item index="3-3">选项3</el-menu-item>
-            <el-menu-item index="3-4">选项4</el-menu-item>
+            <el-menu-item index="uploadupdate">上传更新文件</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
+
       </el-menu>
     </el-aside>
   </div>
@@ -43,6 +42,8 @@
 </script>
 
 <style scoped>
-
-
+  .el-menu{
+    /*解决右侧一个白色条*/
+    border-right-width: 0;
+  }
 </style>
